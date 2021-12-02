@@ -13,21 +13,31 @@ class IosIconTemplate {
 }
 
 List<IosIconTemplate> iosIcons = <IosIconTemplate>[
-  IosIconTemplate(name: '-20x20@1x', size: 20),
-  IosIconTemplate(name: '-20x20@2x', size: 40),
-  IosIconTemplate(name: '-20x20@3x', size: 60),
-  IosIconTemplate(name: '-29x29@1x', size: 29),
-  IosIconTemplate(name: '-29x29@2x', size: 58),
-  IosIconTemplate(name: '-29x29@3x', size: 87),
-  IosIconTemplate(name: '-40x40@1x', size: 40),
-  IosIconTemplate(name: '-40x40@2x', size: 80),
-  IosIconTemplate(name: '-40x40@3x', size: 120),
-  IosIconTemplate(name: '-60x60@2x', size: 120),
-  IosIconTemplate(name: '-60x60@3x', size: 180),
-  IosIconTemplate(name: '-76x76@1x', size: 76),
-  IosIconTemplate(name: '-76x76@2x', size: 152),
-  IosIconTemplate(name: '-83.5x83.5@2x', size: 167),
-  IosIconTemplate(name: '-1024x1024@1x', size: 1024),
+  IosIconTemplate(name: '-20', size: 20),
+  IosIconTemplate(name: '-20@2x', size: 40),
+  IosIconTemplate(name: '-24@2x', size: 48),
+  IosIconTemplate(name: '-20@3x', size: 60),
+  IosIconTemplate(name: '-29', size: 29),
+  IosIconTemplate(name: '-29@2x', size: 58),
+  IosIconTemplate(name: '-27.5@2x', size: 55),
+  IosIconTemplate(name: '-29@3x', size: 87),
+  IosIconTemplate(name: '-40', size: 40),
+  IosIconTemplate(name: '-40@2x', size: 80),
+  IosIconTemplate(name: '-44@2x', size: 88),
+  IosIconTemplate(name: '-50', size: 50),
+  IosIconTemplate(name: '-50@2x', size: 100),
+  IosIconTemplate(name: '', size: 57),
+  IosIconTemplate(name: '@2x', size: 114),
+  IosIconTemplate(name: '-60@2x', size: 120),
+  IosIconTemplate(name: '-60@3x', size: 180),
+  IosIconTemplate(name: '-72', size: 72),
+  IosIconTemplate(name: '-72@2x', size: 144),
+  IosIconTemplate(name: '-76', size: 76),
+  IosIconTemplate(name: '-76@2x', size: 152),
+  IosIconTemplate(name: '-83.5@2x', size: 167),
+  IosIconTemplate(name: '-86@2x', size: 172),
+  IosIconTemplate(name: '-98@2x', size: 196),
+  IosIconTemplate(name: '-1024', size: 1024),
 ];
 
 void createIcons(Map<String, dynamic> config, String? flavor) {
@@ -42,7 +52,8 @@ void createIcons(Map<String, dynamic> config, String? flavor) {
     image.channels = Channels.rgb;
   }
   if (image.channels == Channels.rgba) {
-    print('\nWARNING: Icons with alpha channel are not allowed in the Apple App Store.\nSet "remove_alpha_ios: true" to remove it.\n');
+    print(
+        '\nWARNING: Icons with alpha channel are not allowed in the Apple App Store.\nSet "remove_alpha_ios: true" to remove it.\n');
   }
   String iconName;
   final dynamic iosConfig = config['ios'];
@@ -221,7 +232,7 @@ List<Map<String, String>> createImageList(String fileNamePrefix) {
     ContentsImageObject(
             size: '29x29',
             idiom: 'iphone',
-            filename: '$fileNamePrefix-29x29@1x.png',
+            filename: '$fileNamePrefix-29x29.png',
             scale: '1x')
         .toJson(),
     ContentsImageObject(
@@ -263,7 +274,7 @@ List<Map<String, String>> createImageList(String fileNamePrefix) {
     ContentsImageObject(
             size: '20x20',
             idiom: 'ipad',
-            filename: '$fileNamePrefix-20x20@1x.png',
+            filename: '$fileNamePrefix-20x20.png',
             scale: '1x')
         .toJson(),
     ContentsImageObject(
@@ -275,7 +286,7 @@ List<Map<String, String>> createImageList(String fileNamePrefix) {
     ContentsImageObject(
             size: '29x29',
             idiom: 'ipad',
-            filename: '$fileNamePrefix-29x29@1x.png',
+            filename: '$fileNamePrefix-29x29.png',
             scale: '1x')
         .toJson(),
     ContentsImageObject(
@@ -287,7 +298,7 @@ List<Map<String, String>> createImageList(String fileNamePrefix) {
     ContentsImageObject(
             size: '40x40',
             idiom: 'ipad',
-            filename: '$fileNamePrefix-40x40@1x.png',
+            filename: '$fileNamePrefix-40x40.png',
             scale: '1x')
         .toJson(),
     ContentsImageObject(
@@ -299,7 +310,7 @@ List<Map<String, String>> createImageList(String fileNamePrefix) {
     ContentsImageObject(
             size: '76x76',
             idiom: 'ipad',
-            filename: '$fileNamePrefix-76x76@1x.png',
+            filename: '$fileNamePrefix-76x76.png',
             scale: '1x')
         .toJson(),
     ContentsImageObject(
@@ -317,7 +328,7 @@ List<Map<String, String>> createImageList(String fileNamePrefix) {
     ContentsImageObject(
             size: '1024x1024',
             idiom: 'ios-marketing',
-            filename: '$fileNamePrefix-1024x1024@1x.png',
+            filename: '$fileNamePrefix-1024x1024.png',
             scale: '1x')
         .toJson()
   ];
