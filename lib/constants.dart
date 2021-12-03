@@ -12,9 +12,9 @@ String androidAdaptiveXmlFolder(String? flavor) =>
 const String androidDefaultIconName = 'ic_launcher';
 
 const String iosDefaultIconFolder =
-    'ios/Pickapp Cordova/Images.xcassets/AppIcon.appiconset/';
-const String iosAssetFolder = 'ios/Pickapp Cordova/Images.xcassets/';
-const String iosConfigFile = 'ios/Pickapp Cordova.xcodeproj/project.pbxproj';
+    'ios/PickApp/Images.xcassets/AppIcon.appiconset/';
+const String iosAssetFolder = 'ios/PickApp/Images.xcassets/';
+const String iosConfigFile = 'ios/PickApp.xcodeproj/project.pbxproj';
 const String iosDefaultIconName = 'icon';
 
 const String errorMissingImagePath =
